@@ -1,0 +1,134 @@
+{
+  "name": "Sayonara Mario World 2",
+  "autostart": {
+    "active": "1",
+    "address": "0x1ED2",
+    "value": "0x11",
+    "type": "eq"
+  },
+  "definitions": [
+    {
+      "name": "Normal Exit",
+      "address": "0x906",
+      "value": "0x00",
+      "type": "eq",
+      "next": [
+          {
+              "address": "0x906",
+              "value": "0x01",
+              "type": "eq"
+          }
+      ]
+    },
+    {
+        "name": "Boss Exit",
+        "address": "0x906",
+        "value": "0x01",
+        "type": "eq",
+        "more": [
+            {
+                "address": "0x13C6",
+                "value": "0xFF",
+                "type": "eq"
+            }
+        ]
+    },
+    {
+        "name": "XXO",
+        "address": "0x1f2A",
+        "value": "0x01",
+        "type": "eq"
+    },
+    {
+        "name": "Small Stakes",
+        "address": "0x1DFB",
+        "value": "0x42",
+        "type": "eq",
+        "next": [
+             {
+                "address": "0x1DFB",
+                "value": "0x03",
+                "type": "eq"
+             }
+            ]
+    },
+    {
+        "name": "Wavering Radiant",
+        "address": "0x1DFB",
+        "value": "0x2F",
+        "type": "eq",
+        "next": [
+             {
+                "address": "0x1DFB",
+                "value": "0x03",
+                "type": "eq"
+             }
+            ]
+    },
+	{
+        "name": "Dead Weight",
+        "address": "0x1DFB",
+        "value": "0x39",
+        "type": "eq",
+        "next": [
+             {
+                "address": "0x1DFB",
+                "value": "0x03",
+                "type": "eq"
+             }
+            ]
+    },
+	{
+        "name": "Maze",
+        "address": "0x141A",
+        "value": "0x01",
+        "type": "eq",
+        "next": [
+             {
+                "address": "0x141A",
+                "value": "0x02",
+                "type": "eq"
+             }
+            ]
+    },
+	{
+        "name": "Kaizo",
+        "address": "0x1DFB",
+        "value": "0x37",
+        "type": "eq",
+        "next": [
+             {
+                "address": "0x1DFB",
+                "value": "0x41",
+                "type": "eq"
+             }
+            ]
+    },
+	{
+        "name": "Wild Heart",
+        "address": "0x1DFB",
+        "value": "0x41",
+        "type": "eq",
+        "next": [
+             {
+                "address": "0x1DFB",
+                "value": "0x43",
+                "type": "eq"
+             }
+            ]
+    }
+    ],
+    "alias": {
+        "Pointless Endeavor": "Normal Exit",
+		"Butter Bridge '88": "Normal Exit",
+        "Coyote Time": "Normal Exit",
+        "Minoans": "Normal Exit",
+        "The Lepidopterist": "Normal Exit",
+        "Solid Gold": "Normal Exit",
+        "Halfsleeper": "Normal Exit",
+        "Transference": "Normal Exit",
+		"Misophonia": "Normal Exit",
+		"Cruel Bloom": "Normal Exit",
+		"Attachment Issues": "Boss Exit"
+    }
+}
